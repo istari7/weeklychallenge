@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Simple Hamburger Challenge</title>
+    <style>
+        body {
+  background-color: #333;
+}
+
+.menu-btn {
+  display: block;
+  left: 50%;
+  margin: 1em;
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  transform: translate(-50%,-50%);  
+}
+
+.menu-btn:before,
+.menu-btn:after {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 4px;
+  transition: all 200ms ease-in-out;
+}
+.menu-btn:before {
+  box-shadow: 0 10px 0 #fff;
+  margin-bottom: 16px;
+}
+.menu-btn:hover:before {
+  box-shadow: 0 0 0 #fff;
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-btn:hover:after{
+  transform: translateY(-10px) rotate(-45deg);
+}
+    </style>
+</head>
+<body>
+    <a href="#" class="menu-btn"></a>
+    
+</body>
+</html>
